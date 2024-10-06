@@ -1,0 +1,41 @@
+<form [formGroup]="tenantForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="fullName">Full Name:</label>
+      <input id="fullName" formControlName="fullName" type="text" required>
+    </div>
+  
+    <div>
+      <label for="idCard">ID Card:</label>
+      <input id="idCard" formControlName="idCard" type="text" required>
+    </div>
+  
+    <div>
+      <label for="phoneNumber">Phone Number:</label>
+      <input id="phoneNumber" formControlName="phoneNumber" type="text" required>
+    </div>
+  
+    <div>
+      <label for="occupation">Occupation:</label>
+      <input id="occupation" formControlName="occupation" type="text">
+    </div>
+  
+    <div>
+      <label for="relativeName">Relative Name:</label>
+      <input id="relativeName" formControlName="relativeName" type="text">
+    </div>
+  
+    <div>
+      <label for="relativePhone">Relative Phone:</label>
+      <input id="relativePhone" formControlName="relativePhone" type="text">
+    </div>
+  
+    <div>
+      <label for="roomID">Room:</label>
+      <select id="roomID" formControlName="roomID" required>
+        <option *ngFor="let room of rooms" [value]="room.RoomID">{{ room.RoomCode }}</option>
+      </select>
+    </div>
+  
+    <button type="submit" [disabled]="tenantForm.invalid">Add Tenant</button>
+  </form>
+  

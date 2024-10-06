@@ -1,0 +1,19 @@
+<!-- Nút thêm phòng mới -->
+<button class="btn btn-primary btnAddNewRow" color="primary" (click)="addNewRow()">Thêm Phòng Mới</button>
+<button class="btn btn-danger btnAddNewRow" color="primary" *ngIf="hasSelectedRows" (click)="deleteSelectedRows()">Xóa Hàng Đã Chọn</button>
+<button class="btn btn-warning btnSaveChange" (click)="saveChanges()">Lưu Thay Đổi</button>
+<ag-grid-angular
+  style="width: 100%; height: 500px"
+  class="ag-theme-quartz"
+  [rowData]="rowData"
+  [columnDefs]="colDefs"
+  [defaultColDef]="defaultColDef"
+  [rowSelection]="rowSelection"
+  [pagination]="pagination"
+  [paginationPageSize]="paginationPageSize"
+  [rowHeight]="50"
+  (selectionChanged)="onSelectionChanged()"
+  [paginationPageSizeSelector]="paginationPageSizeSelector"
+  (gridReady)="onGridReady($event)"
+>
+</ag-grid-angular>
