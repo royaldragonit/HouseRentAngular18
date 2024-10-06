@@ -36,7 +36,7 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Chi phí cố định',
-    url: '/cost',
+    url: '/fixed-cost',
     iconComponent: { name: 'cil-dollar' }
   }
 ];

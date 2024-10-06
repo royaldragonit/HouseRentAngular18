@@ -49,6 +49,8 @@ import {
 } from '@coreui/angular';
 import { AddOrEditTenantComponent } from './tenant-list/add-or-edit-tenant/add-or-edit-tenant.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FixedCostComponent } from './fixed-cost/fixed-cost.component';
+import { StaffComponent } from './staff/staff.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +60,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MonthlyBillComponent,
     DefaultHeaderComponent,
     DefaultFooterComponent,
+    FixedCostComponent,
+    StaffComponent,
     AddOrEditTenantComponent
   ], // Thêm các component vào declarations
   imports: [
